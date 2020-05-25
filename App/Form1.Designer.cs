@@ -50,8 +50,20 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.lblTimer = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.gpbProfessoras = new System.Windows.Forms.GroupBox();
+            this.gpbProfessores = new System.Windows.Forms.GroupBox();
+            this.btnFoward = new System.Windows.Forms.Button();
+            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.clbProfessor = new System.Windows.Forms.CheckedListBox();
+            this.clbProfessora = new System.Windows.Forms.CheckedListBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.gpbProfessoras.SuspendLayout();
+            this.gpbProfessores.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -247,6 +259,13 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.button1);
+            this.tabPage2.Controls.Add(this.listBox2);
+            this.tabPage2.Controls.Add(this.btnFoward);
+            this.tabPage2.Controls.Add(this.gpbProfessoras);
+            this.tabPage2.Controls.Add(this.gpbProfessores);
+            this.tabPage2.Controls.Add(this.label1);
+            this.tabPage2.Controls.Add(this.comboBox1);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -272,6 +291,99 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Professores",
+            "Professoras"});
+            this.comboBox1.Location = new System.Drawing.Point(71, 17);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(173, 21);
+            this.comboBox1.TabIndex = 0;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(8, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(57, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Selecione:";
+            // 
+            // gpbProfessoras
+            // 
+            this.gpbProfessoras.Controls.Add(this.clbProfessora);
+            this.gpbProfessoras.Location = new System.Drawing.Point(8, 54);
+            this.gpbProfessoras.Name = "gpbProfessoras";
+            this.gpbProfessoras.Size = new System.Drawing.Size(147, 100);
+            this.gpbProfessoras.TabIndex = 2;
+            this.gpbProfessoras.TabStop = false;
+            this.gpbProfessoras.Text = "Professoras";
+            this.gpbProfessoras.Visible = false;
+            // 
+            // gpbProfessores
+            // 
+            this.gpbProfessores.Controls.Add(this.clbProfessor);
+            this.gpbProfessores.Location = new System.Drawing.Point(8, 54);
+            this.gpbProfessores.Name = "gpbProfessores";
+            this.gpbProfessores.Size = new System.Drawing.Size(147, 100);
+            this.gpbProfessores.TabIndex = 0;
+            this.gpbProfessores.TabStop = false;
+            this.gpbProfessores.Text = "Professores";
+            this.gpbProfessores.Visible = false;
+            // 
+            // btnFoward
+            // 
+            this.btnFoward.Location = new System.Drawing.Point(170, 96);
+            this.btnFoward.Name = "btnFoward";
+            this.btnFoward.Size = new System.Drawing.Size(34, 23);
+            this.btnFoward.TabIndex = 0;
+            this.btnFoward.Text = ">>>";
+            this.btnFoward.UseVisualStyleBackColor = true;
+            // 
+            // listBox2
+            // 
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.Location = new System.Drawing.Point(219, 54);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(136, 173);
+            this.listBox2.TabIndex = 3;
+            // 
+            // clbProfessor
+            // 
+            this.clbProfessor.FormattingEnabled = true;
+            this.clbProfessor.Items.AddRange(new object[] {
+            "Professor 01",
+            "Professor 02",
+            "Professor 03"});
+            this.clbProfessor.Location = new System.Drawing.Point(6, 19);
+            this.clbProfessor.Name = "clbProfessor";
+            this.clbProfessor.Size = new System.Drawing.Size(135, 64);
+            this.clbProfessor.TabIndex = 0;
+            // 
+            // clbProfessora
+            // 
+            this.clbProfessora.FormattingEnabled = true;
+            this.clbProfessora.Items.AddRange(new object[] {
+            "Professora 01",
+            "Professora 02",
+            "Professora 03"});
+            this.clbProfessora.Location = new System.Drawing.Point(6, 19);
+            this.clbProfessora.Name = "clbProfessora";
+            this.clbProfessora.Size = new System.Drawing.Size(135, 64);
+            this.clbProfessora.TabIndex = 1;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(11, 245);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(344, 23);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Gravar";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -285,6 +397,10 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
+            this.gpbProfessoras.ResumeLayout(false);
+            this.gpbProfessores.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -313,6 +429,15 @@
         private System.Windows.Forms.Button btn8;
         private System.Windows.Forms.Button btn7;
         private System.Windows.Forms.TextBox txb01;
+        private System.Windows.Forms.GroupBox gpbProfessoras;
+        private System.Windows.Forms.GroupBox gpbProfessores;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.Button btnFoward;
+        private System.Windows.Forms.CheckedListBox clbProfessora;
+        private System.Windows.Forms.CheckedListBox clbProfessor;
+        private System.Windows.Forms.Button button1;
     }
 }
 

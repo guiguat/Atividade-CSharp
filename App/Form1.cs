@@ -125,5 +125,19 @@ namespace App
                 MessageBox.Show("Para calcular o total deve haver pelo menos 3 itens na lista", "ERROR");
             }
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox1.SelectedItem.ToString() == "Professores")
+            {
+                gpbProfessores.Visible = true;
+                gpbProfessoras.Visible = false;
+            }
+            else if (comboBox1.SelectedItem.ToString() == "Professoras")
+            {
+                gpbProfessoras.Visible = true;
+                gpbProfessores.Visible = false;
+            }
+        }
     }
 }
