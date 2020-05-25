@@ -45,5 +45,85 @@ namespace App
             }
             lblTimer.Text = $"{hora}:{minuto}:{segundo}";
         }
+
+        private void btn1_Click(object sender, EventArgs e)
+        {
+            txb01.Text = $"{ txb01.Text }{btn1.Text}";
+        }
+
+        private void btn2_Click(object sender, EventArgs e)
+        {
+            txb01.Text = $"{ txb01.Text }{btn2.Text}";
+        }
+
+        private void btn3_Click(object sender, EventArgs e)
+        {
+            txb01.Text = $"{ txb01.Text }{btn3.Text}";
+        }
+
+        private void btn4_Click(object sender, EventArgs e)
+        {
+            txb01.Text = $"{ txb01.Text }{btn4.Text}";
+        }
+
+        private void btn5_Click(object sender, EventArgs e)
+        {
+            txb01.Text = $"{ txb01.Text }{btn5.Text}";
+        }
+
+        private void btn6_Click(object sender, EventArgs e)
+        {
+            txb01.Text = $"{ txb01.Text }{btn6.Text}";
+        }
+
+        private void btn7_Click(object sender, EventArgs e)
+        {
+            txb01.Text = $"{ txb01.Text }{btn7.Text}";
+        }
+
+        private void btn8_Click(object sender, EventArgs e)
+        {
+            txb01.Text = $"{ txb01.Text }{btn8.Text}";
+        }
+
+        private void btn9_Click(object sender, EventArgs e)
+        {
+            txb01.Text = $"{ txb01.Text }{btn9.Text}";
+        }
+
+        private void btnZero_Click(object sender, EventArgs e)
+        {
+            txb01.Text = $"{ txb01.Text }{btnZero.Text}";
+        }
+
+        private void btnPlus_Click(object sender, EventArgs e)
+        {
+            listBox1.Items.Add(txb01.Text);
+        }
+
+        private void btnMinus_Click(object sender, EventArgs e)
+        {
+            if (listBox1.Items.Count > 0)
+            {
+                listBox1.Items.Remove(listBox1.SelectedItem);
+            }
+        }
+
+        private void btnTotal_Click(object sender, EventArgs e)
+        {
+            if (listBox1.Items.Count >= 3)
+            {
+                var sum = 0;
+                foreach (var item in listBox1.Items)
+                {
+                    sum += int.Parse(item.ToString());
+                }
+                lblTotal.Text = sum.ToString();
+            }
+            else
+            {
+                MessageBox.Show("Para calcular o total deve haver pelo menos 3 itens na lista", "ERROR");
+            }
+        }
     }
 }
