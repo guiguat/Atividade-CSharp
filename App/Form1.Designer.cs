@@ -342,6 +342,7 @@
             this.btnFoward.TabIndex = 0;
             this.btnFoward.Text = ">>>";
             this.btnFoward.UseVisualStyleBackColor = true;
+            this.btnFoward.Click += new System.EventHandler(this.btnFoward_Click);
             // 
             // listBox2
             // 
@@ -383,6 +384,7 @@
             this.button1.TabIndex = 2;
             this.button1.Text = "Gravar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 

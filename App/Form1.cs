@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -122,7 +123,7 @@ namespace App
             }
             else
             {
-                MessageBox.Show("Para calcular o total deve haver pelo menos 3 itens na lista", "ERROR");
+                MessageBox.Show("Para calcular o total deve haver pelo menos 3 itens na lista", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -138,6 +139,46 @@ namespace App
                 gpbProfessoras.Visible = true;
                 gpbProfessores.Visible = false;
             }
+        }
+
+        private void btnFoward_Click(object sender, EventArgs e)
+        {
+            if(gpbProfessores.Visible)
+            {
+                foreach(var item in clbProfessor.CheckedItems)
+                {
+                    if (!listBox2.Items.Contains(item.ToString()))
+                    {
+                        listBox2.Items.Add(item.ToString());
+                    }
+                }
+                
+            }
+            else if (gpbProfessoras.Visible)
+            {
+                foreach (var item in clbProfessora.CheckedItems)
+                {
+                    if (!listBox2.Items.Contains(item.ToString()))
+                    {
+                        listBox2.Items.Add(item.ToString());
+                    }
+                }
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            StreamWriter arquivo;
+            if (System.IO.File.Exists(".\\save.txt"))
+                File.Delete(".\\save.txt");
+            arquivo = new StreamWriter(".\\save.txt");
+            foreach (var item in listBox2.Items)
+            {
+                arquivo.WriteLine(item.ToString());
+            }
+            arquivo.Close();
+            MessageBox.Show("Arquivo Gravado com Sucesso!",
+            "Finalização", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
