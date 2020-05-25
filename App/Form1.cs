@@ -28,11 +28,6 @@ namespace App
             lblTimer.Text = $"{hora}:{minuto}:{segundo}";
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void timer1_Tick(object sender, EventArgs e)
         {
             //incrementar as variaveis do tempo
